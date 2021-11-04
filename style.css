@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url('https://source.unsplash.com/1600x900/?nature/1366x768');
+    background-image: url('img.png');
     display: flex;
     justify-content: center;
 }
