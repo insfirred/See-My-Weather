@@ -11,8 +11,8 @@ let weather = {
         console.log(name, icon, description, temp, humidity)
 
         document.querySelector(".heading").innerText = name;
-        document.querySelector(".temp").innerText = temp + "°C";
-        document.querySelector(".weathericon").scr = "http://openweathermap.org/img/w/" + icon + ".png";
+        document.querySelector(".temp").innerText = temp + " °C";
+        document.querySelector(".weathericon").src = "http://openweathermap.org/img/w/" + icon + ".png";
         document.querySelector(".infotext").innerHTML = description;
         document.querySelector(".humidity").innerHTML = "Humidity: " + humidity + "%";
     },
@@ -23,4 +23,10 @@ let weather = {
 
 document.querySelector(".searchicon").addEventListener('click', function() {
     weather.import();
+})
+
+document.querySelector(".searchbar").addEventListener('keyup', function(event) {
+    if (event.key == "Enter") {
+        weather.import();
+    }
 })
